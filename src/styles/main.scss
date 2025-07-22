@@ -1,29 +1,37 @@
 // configurações
-@use './config/config.scss';
 @use './config/variaveis.scss';
 
 // estilizações
 @use'hero';
+@use'shows';
+@use 'plans';
 
-@font-face{
+@font-face {
    font-family: Avenir;
    src: url(../../assets/fonts/Avenir-Regular.woff2);
    font-weight: 400;
 }
 
-@font-face{
+@font-face {
    font-family: Avenir;
    src: url(../../assets/fonts/Avenir-Bold.woff2);
    font-weight: 700;
 }
 
-body {
-   background-color: variaveis.$backgroundColor;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
    font-family: Avenir, sans-serif;
 }
 
+body {
+   background-color: variaveis.$backgroundColor;
+
+}
+
 @mixin title($fontSize: 40px) {
-    @include text($fontSize);
+   @include text($fontSize);
    color: variaveis.$textColor2;
 }
 
@@ -58,7 +66,21 @@ body {
 }
 
 .link-text {
-    @include text(18px);
-    color: variaveis.$textColor2;
-    text-decoration: underline;
+   @include text(18px);
+   color: variaveis.$textColor2;
+   text-decoration: underline;
+}
+
+button {
+   display: block;
+   width: 100%;
+   height: 60px;
+   font-size: 18px;
+   color: variaveis.$textColor2;
+   background-color: #6421ff;
+   text-transform: uppercase;
+   border-radius: 4px;
+   margin-top: 2vw;
+   margin-bottom: 8px;
+   cursor: pointer;
 }
